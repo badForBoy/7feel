@@ -1,0 +1,83 @@
+body, div, h1, h2, h3, h4, h5, h5, p, ul, ol, li, dl, dt, dd { margin: 0; padding: 0;}
+ul, ol { list-style-type: none;}
+*{padding: 0;margin: 0;}
+html,body{height: 100%;}
+
+body { font: 14px "Microsoft Yahei",Arial,Helvetica,sans-serif; color: #515151;}
+a { color: #949494; text-decoration: none;}
+a:hover { color: #90c41f;}
+img{
+	border: none;
+	/* width: 100%; */
+}
+
+.relative{position: relative;}
+.absolute{position: absolute;}
+
+.clearfix:before,
+.clearfix:after{content: "";display: table;}
+.clearfix:after{clear: both;}
+.clearfix{zoom: 1;}
+
+.container{width: 1200px;margin: 0 auto;position: relative;}
+.container-fluid{width: 100%;margin: 0 auto;}
+.section{position: relative;}
+
+.header{ transition: all 1s;-webkit-transition:background-color 1s,padding-top 1s;background-color: #111119;height: 60px;padding-top: 10px;line-height: 60px;position: fixed; top: 0px; left: 0; z-index: 100; width: 100%;}
+.header.move{background-color: #fff;padding-top: 0; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2px 6px;}
+.header ul.nav{float: right;margin-right: 200px;}
+.header ul li{float: left;}
+.header ul li a{display: block;padding: 0 20px;height: 59px;}
+.header ul li a:hover,.header ul li a.on{border-bottom: 3px solid #90c41f;}
+.header ul li a:hover ,.header ul li a.on{color: #90c41f;}
+.header .login{position: absolute;right: 0;}
+.header .login a{padding: 0 12px;}
+.header .logo{position: absolute;left: 0;}
+.header .logo a{display:block;margin:10px 0;background: url(../images/logo_1.png) no-repeat;width: 190px;height: 40px;}
+.border-bottom{border-bottom: 1px solid #ddd;display: none;}
+
+.banner{position: fixed;z-index: 1;top: 0;width: 100%;min-height: 760px;}
+.banner,.banner .container-fluid,.banner .wrap-banner,.banner ul,.banner li{height: 100%;}
+.banner .wrap-banner{width: 100%;overflow: hidden;position: relative;}
+.banner ul{width: 400%;height: 100%;position: absolute;left: -100%;}
+.banner li{width: 25%;height: 100%;float: left;overflow: hidden;}
+.banner .wrap-banner .item img{margin: 0 auto;}
+.banner .item1 .banner-title{position: absolute;top: 160px;right: 50%;margin-right: -175px;text-align: center;color: #fff;z-index: 99;}
+.banner .item1 .banner-title div{margin: 10px 0;}
+.banner .item1 .banner-title span{padding: 2px 12px;background-color: #188eee;border-radius: 4px;margin:0 10px;font-size: 12px;}
+.banner .item1 img{position: absolute;left: 0;margin-left: -370px !important;}
+.banner .item2{background: #161616;text-align: right;}
+.banner .item2 .banner-title{position: absolute;top: 36%;right: 830px;}
+.banner .item2 .banner-title h1{font-size: 48px;color: #01b5f0;}
+.banner .item2 .banner-title h3{font-size: 24px;color: #01b5f0;margin-bottom: 20px;}
+.banner .next{position: absolute;top: 50%;left: 32px;cursor: pointer;}
+.banner .pre{position: absolute;top: 50%;right: 32px;cursor: pointer;}
+.banner .next:hover i,.banner .pre:hover i{color: #90c41f;}
+.banner .wrap-banner span i{font-size:48px;color: #2b2a39;}
+
+.service{position: relative;z-index: 10;background: #fff;padding-bottom: 40px;}
+.service .container{overflow: hidden;padding: 20px 0;}
+.service .title{text-align: center;padding: 100px 0 70px;}
+.service .title h1{font-weight: normal;margin-bottom: 10px;}
+.service .item h3{font-weight: normal;font-size: 16px;margin: 20px 0 10px;color: #666;padding: 0 10px;}
+.service .title p{font-size: 16px;color: #949494;}
+.service .item p{font-size: 12px;color: #949494;line-height: 1.8;padding: 0 10px;}
+.service .item{width: 25%;float: left;text-align: center;cursor: default;box-sizing: border-box;margin-bottom: 20px;position: relative;}
+.service .col-6{width: 50%;}
+.service .item .box-item{box-shadow:0 8px 16px 0 rgba(7,17,27,.0);min-height: 180px;transition: all 0.3s linear;margin: 0 10px;border-radius: 4px;overflow: hidden;}
+.service .item .box-item:hover{box-shadow:0px 14px 40px rgb(219, 219, 219);}
+.service .item i{font-size: 48px;color: #fff;}
+.service .more{text-align: center;margin-top: 60px;height: 90px;line-height: 90px;background: #90c41f;}
+.service .more a{font-size: 16px;color: #fff;transition: all 1s;display: block;}
+.service .more a:hover{margin-left: -80px;}
+.service .box-item .icon{background: orange;padding: 5px 0;}
+.service .box-item .icon1{background: url(../images/icon_1.jpg) no-repeat;}
+.service .box-item .icon2{background: url(../images/icon_2.jpg) no-repeat;}
+.service .box-item .icon3{background: url(../images/icon_3.jpg) no-repeat;}
+.service .box-item .icon4{background: url(../images/icon_8.jpg) no-repeat;}
+
+.case{background: #fff;position: relative;z-index: 20;}
+.case .title{text-align: center;padding: 100px 0 70px;}
+.case .title h1{font-weight: normal;margin-bottom: 10px;}
+.case .title p{font-size: 16px;color: #949494;}
+.case .item {width: 33.33333333333%;float: left;}
