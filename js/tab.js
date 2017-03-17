@@ -54,17 +54,6 @@ $(document).ready(function() {
 		});
 	}
 
-	/*首屏导航过渡效果*/
-	$(window).scroll(function(event) {
-		$(".header").stop(true);
-		var $sc = $(window).scrollTop();
-		//console.log($sc)
-		if ($sc > 160) {
-			$(".header").addClass('move')
-		} else if ($sc < 160) {
-			$(".header").removeClass('move')
-		}
-	});
 
 
 	$(".service .item").eq(0).css({left: '-400px'});//服务板块过渡效果
@@ -72,15 +61,41 @@ $(document).ready(function() {
 	$(".service .item").eq(3).css({right: '-100px'});//服务板块过渡效果
 	$(".service .item").eq(4).css({right: '-400px'});//服务板块过渡效果
 	$(".procedure .wrap .item .box-item").css({top: '400px'});//合作流程
-
-
 	$(".case .wrap .item .box-item").css({top: '400px'});//优质案例
+	$(".news .modal .item").css({top: '300px'});
 
+	/*服务项目tab切换*/
+	var $modalItem = $(".modal").find(".item");
+	$(".tab").find('.item').click(function(event) {
+		//debugger
+		for (var i = 0; i < $modalItem.length; i++) {
+			$modalItem.eq(i).stop(true);
+		}
+		var num = $(this).index();
+		$modalItem.eq(num).fadeIn(200).siblings($modalItem).fadeOut(0);
+		$modalItem.eq(num).find('p').animate({top:0}, 600);
+		var time7 = setTimeout(function(){
+			$modalItem.eq(num).find('.img').animate({top:0}, 600);
+		},200);
+	});
 
 	$(window).scroll(function(event) {
-		//$(".service .item").stop(true);
 		var $sc = $(window).scrollTop();
-		if ($sc > $height/2) {//服务板块过渡效果
+		$(".header").stop(true);
+		switch(true)
+		{//首屏导航栏
+			case $sc > 160:
+				$(".header").addClass('move')
+			break;
+			case $sc < 160:
+				$(".header").removeClass('move')
+			break;
+			default:;
+		}
+		
+		switch(true)
+		{//服务板块过渡效果
+			case $sc > $height/2 && $sc < $height*5/4:
 			var time0 = setTimeout(function(){
 				$(".service .item:eq(0)").animate({left: 0},600);
 			},0);
@@ -93,24 +108,24 @@ $(document).ready(function() {
 			var time3 = setTimeout(function(){
 				$(".service .item:eq(4)").animate({right: 0},600);
 			},0);
-		} else if ($sc < 160) {
-			$(".header").removeClass('move')
+			break;
+			default:;
 		}
 
-		if ($sc > $height*4/5) {
+		switch(true)
+		{//服务项目 内容
+			case $sc > $height*4/5 && $sc < $height*2:
 			$modalItem.eq(0).find('p').animate({top:0}, 600);
-			var time6 = setTimeout(function(){
+			setTimeout(function(){
 				$modalItem.eq(0).find('.img').animate({top:0}, 600);
 			},200);
-		} else if ($sc > $height*2) {
-			debugger
-			$modalItem.eq(0).find('p').animate({top:400}, 600);
-			var time6 = setTimeout(function(){
-				$modalItem.eq(0).find('.img').animate({top:400}, 600);
-			},200);
+			break;
+			default:;
 		}
 
-		if ($sc > $height*2) {
+		switch(true)
+		{//合作流程
+			case $sc > $height*2 && $sc < $height*3:
 			var time10 = setTimeout(function(){
 				$(".procedure .wrap .item1 .box-item").animate({top: 0},600);
 			},100);
@@ -135,34 +150,71 @@ $(document).ready(function() {
 			var time17= setTimeout(function(){
 				$(".procedure .btn a").fadeIn(600);
 			},900);
+			break;
+			default:;
 		}
 
-		if ($sc > $height*2) {//优质案例
-			for (var i = 0; i < $(".case .wrap .item").length; i++) {
-				//debugger
-				//$(".case .wrap .item").eq(i).find(".box-item").animate({top: 0},600);
-				var t = setTimeout(function(){
-					//var j = i;
-					$(".case .wrap .item").eq(i).find(".box-item").animate({top: 0},600);
-				},100*(i+1));
-				console.log(i)
-			}
+		switch(true)
+		{///优质案例
+			case $sc > $height*5/2 && $sc < $height*7/2:
+			setTimeout(function(){
+				$(".case .wrap .item").eq(0).find(".box-item").animate({top: 0},600);
+			},100);
+			setTimeout(function(){
+				$(".case .wrap .item").eq(1).find(".box-item").animate({top: 0},600);
+			},200);
+			setTimeout(function(){
+				$(".case .wrap .item").eq(2).find(".box-item").animate({top: 0},600);
+			},300);
+			break;
+			case $sc > $height*7/2 && $sc < $height*5:
+			setTimeout(function(){
+				$(".case .wrap .item").eq(3).find(".box-item").animate({top: 0},600);
+			},100);
+			setTimeout(function(){
+				$(".case .wrap .item").eq(4).find(".box-item").animate({top: 0},600);
+			},200);
+			setTimeout(function(){
+				$(".case .wrap .item").eq(5).find(".box-item").animate({top: 0},600);
+			},300);
+			break;
+			default:;
+		}
+		
+		switch(true)
+		{//新闻
+			case $sc > $height*5 && $sc < $height*11/2:
+			setTimeout(function(){
+				$(".news .modal .item").eq(0).animate({top: 0},600);
+			},100);
+			setTimeout(function(){
+				$(".news .modal .item").eq(1).animate({top: 0},600);
+			},200);
+			setTimeout(function(){
+				$(".news .modal .item").eq(2).animate({top: 0},600);
+			},300);
+			setTimeout(function(){
+				$(".news .modal .item").eq(3).animate({top: 0},600);
+			},400);
+			break;
+			default:;
 		}
 
 	});
 
 	/*tab切换*/
-	var $modalItem = $(".modal").find(".item");
-	$(".tab").find('.item').click(function(event) {
-		for (var i = 0; i < $modalItem.length; i++) {
-			$modalItem.eq(i).stop(true);
-		}
+	var $modalwrap = $(".modal").find(".wrap");
+	$(".news .tab").find('a').click(function(event) {
 		var num = $(this).index();
-		$modalItem.eq(num).fadeIn(200).siblings($modalItem).fadeOut(0);
-		$modalItem.eq(num).find('p').animate({top:0}, 600);
-		var time7 = setTimeout(function(){
-			$modalItem.eq(num).find('.img').animate({top:0}, 600);
-		},200);
+		$modalwrap.eq(num).fadeIn(200).siblings($modalwrap).fadeOut(0);
+		setTimeout(function(){
+			$modalwrap.eq(num).find(".item").animate({top: 0},600);
+		},600)
 	});
+
+	/*合作单位*/
+	var $newsItemWidth = $(".news .modal .item").width();
+	var $length = 
+	$(".news .modal .wrap").css({width: 'value1'});
 
 });
