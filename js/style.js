@@ -8,9 +8,15 @@ $(document).ready(function() {
 
 	/*动态设置banner板块的高度*/
 	var $height = $(".banner").height();
-	$(".service").css({
-		marginTop: $height
-	});
+	if ($(window).width() < 768) {
+		$(".service").css({
+			marginTop: 265
+		});
+	} else {
+		$(".service").css({
+			marginTop: $height
+		});
+	}
 
 	/*轮播图点击翻页效果*/
 	var $width = $(window).width();
@@ -18,14 +24,13 @@ $(document).ready(function() {
 		$ul.stop();
 		index++;
 		var num = -$width * index;
-		//console.log(index)
 		move(num)
 	});
 	$(".pre").click(function(num) {
+		//debugger
 		$ul.stop();
 		index--;
 		var num = -$width * index;
-		//console.log(index)
 		move(num)
 	});
 
@@ -114,7 +119,7 @@ $(document).ready(function() {
 
 			switch(true)
 			{//合作流程
-				case $sc > $(".procedure").offset().top - 200 && $sc < $(".procedure").offset().top + 250:
+				case $sc > $(".procedure").offset().top - $height/2 && $sc < $(".procedure").offset().top + 250:
 				var time10 = setTimeout(function(){
 					$(".procedure .wrap .item1 .box-item").animate({top: 0},600);
 				},100);
@@ -145,7 +150,7 @@ $(document).ready(function() {
 
 			switch(true)
 			{//优质案例
-				case $sc > $(".case").offset().top && $sc < $(".case").offset().top + 600:
+				case $sc > $(".case").offset().top - $height/2 && $sc < $(".case").offset().top + 600:
 				//debugger
 				setTimeout(function(){
 					$(".case .wrap .item").eq(0).find(".box-item").animate({top: 0},600);
@@ -157,7 +162,7 @@ $(document).ready(function() {
 					$(".case .wrap .item").eq(2).find(".box-item").animate({top: 0},600);
 				},300);
 				break;
-				case $sc > $(".case").offset().top + 600 && $sc < $(".case").offset().top + 1200:
+				case $sc > $(".case").offset().top - 500 && $sc < $(".case").offset().top + 1000:
 				setTimeout(function(){
 					$(".case .wrap .item").eq(3).find(".box-item").animate({top: 0},600);
 				},100);
@@ -171,9 +176,10 @@ $(document).ready(function() {
 				default:;
 			}
 			
+			
 			switch(true)
 			{//新闻
-				case $sc > 3970 && $sc < $height/2 + 3970:
+				case $sc > $(".case").offset().top + 1200 && $sc < $(".case").offset().top + 1700:
 				setTimeout(function(){
 					$(".news .modal .item").eq(0).animate({top: 0},600);
 				},100);
@@ -237,8 +243,8 @@ $(document).ready(function() {
 
 	//手机端点击事件
 	$(".mun i").on('touchstart',function(e){
-		var $length = $(".mun .box div").length;
-		var $height = $(".mun .box div").height();
+		var $length = $(".mun .box a").length;
+		var $height = $(".mun .box a").height();
 		//debugger
 		e.preventDefault();
 		//console.log($length)
