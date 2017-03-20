@@ -67,6 +67,8 @@ $(document).ready(function() {
 		$(".procedure .wrap .item .box-item").css({top: '400px'});//合作流程
 		$(".case .wrap .item .box-item").css({top: '400px'});//优质案例
 		$(".news .modal .item").css({top: '300px'});
+		$(".contact .aside").css({left:'-400px'});
+		$(".contact .form").css({right:'-400px'});
 	}
 
 	
@@ -195,6 +197,20 @@ $(document).ready(function() {
 				break;
 				default:;
 			}
+
+
+			switch(true)
+			{//联系我们
+				case $sc > $(".contact").offset().top - $height/3 :
+				setTimeout(function(){
+					$(".contact .aside").animate({left: 0},600);
+				},100);
+				setTimeout(function(){
+					$(".contact .form").animate({right: 0},600);
+				},200);
+				break;
+				default:;
+			}
 		
 
 	});
@@ -241,7 +257,7 @@ $(document).ready(function() {
 	var $length = 
 	$(".news .modal .wrap").css({width: 'value1'});
 
-	//手机端点击事件
+	//导航栏手机端点击事件
 	$(".mun i").on('touchstart',function(e){
 		var $length = $(".mun .box a").length;
 		var $height = $(".mun .box a").height();
@@ -250,5 +266,12 @@ $(document).ready(function() {
 		//console.log($length)
 		$(".mun .box").height() == 0 ? $(".mun .box").animate({height: $height * $length}, 600) : $(".mun .box").animate({height: 0}, 600);
 	})
+
+	/*页面跳转*/
+	$(".header .nav li").eq(3).click(function(event) {
+		//debugger
+		var scroll_offset = $(".contact").offset(); //得到pos这个div层的offset，包含两个值，top和left 
+		$("body,html").animate({scrollTop:scroll_offset.top },1000); 
+	});
 
 });

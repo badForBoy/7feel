@@ -5,7 +5,7 @@ html,body{height: 100%;}
 
 body { font: 14px "Microsoft Yahei",Arial,Helvetica,sans-serif; color: #515151;}
 a { color: #949494; text-decoration: none;}
-a:hover { color: #188eee;}
+a:hover { color: #00ccff;}
 img{
 	border: none;
 	/* width: 100%; */
@@ -33,7 +33,7 @@ img{
 .section .title p{font-size: 16px;color: #949494;}
 .section .btn{text-align: center;height: 51px;}
 .section .btn a{padding: 15px 50px;border-radius: 30px;color: #949494;border: 1px solid #ddd;background-color: #fff;transition: all .3s;display: none;}
-.section .btn a:hover{background-color: #188eee;color: #fff;border:1px solid #188eee;padding: 15px 150px}
+.section .btn a:hover{background-color: #00ccff;color: #fff;border:1px solid #00ccff;padding: 15px 150px}
 
 .header{ transition: all 1s;-webkit-transition:background-color 1s,padding-top 1s;background-color: #161616;height: 60px;padding-top: 10px;line-height: 60px;position: fixed; top: 0px; left: 0; z-index: 100; width: 100%;}
 .header.move{background-color: #fff;padding-top: 0; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2px 6px;}
@@ -41,8 +41,8 @@ img{
 .header ul.nav{float: right;margin-right: 200px;}
 .header ul li{float: left;}
 .header ul li a{display: block;padding: 0 20px;height: 59px;}
-.header ul li a:hover,.header ul li a.on{border-bottom: 3px solid #188eee;}
-.header ul li a:hover ,.header ul li a.on{color: #188eee;}
+.header ul li a:hover,.header ul li a.on{border-bottom: 3px solid #00ccff;}
+.header ul li a:hover ,.header ul li a.on{color: #00ccff;}
 .header .login{position: absolute;right: 0;}
 .header .login a{padding: 0 12px;}
 .header .logo{position: absolute;left: 0;}
@@ -71,7 +71,7 @@ img{
 .banner .item2{background: #161616;}
 .banner .next{position: absolute;top: 50%;left: 32px;cursor: pointer;}
 .banner .pre{position: absolute;top: 50%;right: 32px;cursor: pointer;}
-.banner .next:hover i,.banner .pre:hover i{color: #90c41f;}
+.banner .next:hover i,.banner .pre:hover i{color: #00ccff;}
 .banner .wrap-banner span i{font-size:48px;color: #2b2a39;}
 @media screen and (max-width: 768px){   
 	.banner{top: 60px;height: 220px;}   
@@ -196,7 +196,7 @@ img{
 .news .modal .wrap .item p.date{font-size: 12px;padding: 0 10px;margin-bottom: 20px;}
 .news .modal .wrap .item a{height: 38px;line-height: 38px;text-align: center;width: 126px;border: 1px solid #949494;transition: all .6s;position: relative;display: block;}
 .news .modal .wrap .item a span{position: absolute;left: 0;transition: left .6s;color: #fff;}
-.news .modal .wrap .item:hover a{background-color: #188eee;color: #fff;border: 1px solid #188eee;padding: 8px 28 8px 48px;}
+.news .modal .wrap .item:hover a{background-color: #00ccff;color: #fff;border: 1px solid #00ccff;padding: 8px 28 8px 48px;}
 .news .modal .wrap .item:hover a span{left: 30px;}
 .news .modal .wrap .item a i{position: absolute;right: 55px;transition: right .6s;}
 .news .modal .wrap .item:hover a i{right: 35px;}
@@ -213,14 +213,18 @@ img{
 }
 
 .contact{background: #fff;position: relative;z-index: 50;padding-bottom: 80px;text-align: center;}
-.contact .aside{float: left;width: 50%;text-align: left;}
+.contact .aside{float: left;width: 50%;text-align: left;position: relative;}
 .contact .aside h3{margin-bottom: 50px;}
 .contact .aside p{margin-bottom: 30px;color: #949494;}
-.contact .form{float: left;width: 50%;}
-.contact .form input,.contact .form textarea{color: #515151;border: none;border-bottom: 1px solid #949494;width: 100%;box-sizing: border-box;padding: 12px 10px;outline: none;margin-bottom: 20px;}
-.contact .form input:hover,.contact .form textarea:hover{border-bottom: 1px solid #188eee;}
+.contact .form{float: left;width: 50%;position: relative;}
+.contact .form .item{position: relative;}
+.contact .form .label{width: 100px;float: left;height: 40px;color: #949494;}
+.contact .form .label label{position: absolute;bottom: 32px;}
+.contact .form input,.contact .form textarea{float: left;color: #515151;border: none;border-bottom: 1px solid #949494;width: 500px;box-sizing: border-box;padding: 12px 10px;outline: none;margin-bottom: 20px;}
+.contact .form input:hover,.contact .form textarea:hover{border-bottom: 1px solid #00ccff;}
+.contact .form .submit{position: relative;right: -100px;}
 .contact .form .submit input{border: none;color: #949494;}
-.contact .form .submit input:hover{background-color: #188eee;color: #fff;}
+.contact .form .submit input:hover{background-color: #00ccff;color: #fff;}
 @media screen and (max-width: 768px){  
 	.contact .wrap{padding: 0 15px;}
 	.contact .aside{width: 100%;}
@@ -229,18 +233,24 @@ img{
 
 .footer{position: relative;z-index: 60;padding: 40px 0;text-align: center;background-color: #e9e9e9;}
 
-.function{background-color: #fff;margin-top: 120px;min-height: 400px;margin-bottom: 80px;}
+.function{background-color: #fff;margin-top: 60px;min-height: 400px;margin-bottom: 80px;}
 table{border-collapse:collapse;width: 100%;}
 .function td{border: 1px solid #ddd;padding: 10px 15px;}
-.function th{border: 1px solid #ddd;padding: 15px 15px;background-color: #eaeaea;border-top: 4px solid #188eee;}
-.function .tab{margin-bottom: 20px;}
-.function .tab a{float: left;width: 33.3333333%;text-align: center;box-sizing: border-box;padding: 20px;background-color: #188eee;color: #fff;}
-.function .tab a:hover{background-color: #127cd3;}
-.function .wrap{display: none;}
+.function th{border: 1px solid #ddd;padding: 15px 15px;background-color: #eaeaea;border-top: 4px solid #00ccff;}
+.function .tab{margin-bottom: 20px; margin-top: 20px;}
+.function .tab a{float: left;width: 33.3333333%;text-align: center;box-sizing: border-box;padding: 20px;background-color: #00ccff;color: #fff;}
+.function .tab a:hover,.function .tab a:focus{background-color: #127cd3;}
+.function .tab a.on{background-color: #127cd3;}
+.function .wrap{display: none;overflow-x: auto;}
 .function .wrap.on{display: block;}
+.function .center-banner img{width: 100%;}
+@media screen and (max-width: 768px){  
+	.function .wrap{padding: 0 15px;}
+	table{width: 900px;}
+}
 
-.details{background-color: #fff;margin-top: 120px;min-height: 400px;margin-bottom: 80px;}
-.details .news-header{border-left: 2px solid #188eee;margin-bottom: 80px;}
+.details{background-color: #fff;padding-top: 120px;min-height: 400px;margin-bottom: 80px;}
+.details .news-header{border-left: 2px solid #00ccff;margin-bottom: 80px;}
 .details .news-header p,.details .news-header h3{padding-left: 10px;font-weight: normal;margin-bottom: 10px;}
 .details .news-header h3{font-size: 24px;}
 .details .news-header p{font-size: 14px;}
@@ -251,10 +261,13 @@ table{border-collapse:collapse;width: 100%;}
 .details .main .aside-right li{border-bottom: 1px solid #e6e6e6;margin-bottom: 40px;cursor: default;}
 .details .main .aside-right .box-right{padding-left: 60px;}
 .details .main .aside-right .box-right a{display: block;font-size: 18px;margin-bottom: 20px;font-weight: normal;color: #515151;}
-.details .main .aside-right .box-right a:hover{color: #188eee;}
+.details .main .aside-right .box-right a:hover{color: #00ccff;}
 .details .main .aside-right .box-right p{color: #949494;line-height: 1.8;height: 50px;overflow: hidden;}
 
-.center{background-color: #fff;margin-top: 60px;min-height: 400px;margin-bottom: 80px;}
+.center{background-color: #fff;padding-top: 60px;min-height: 400px;margin-bottom: 80px;}
 .center .modal .wrap .item{margin-bottom: 80px;}
 .center .center-banner{margin-bottom: 40px;}
 .center img{width: 100%;}
+@media screen and (max-width: 768px){  
+	.center .modal .wrap .item{margin-bottom: 10px;}
+}

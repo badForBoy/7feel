@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<meta name="keywords" content="成功案例,商家案例">
 	<meta name="description" content="一段文案">
-	<title>第7感网络科技</title>
+	<title>第七感网络科技</title>
 	<link rel="shortcut icon" href="images/ico.ico" type="image/x-icon">
 	<link rel="stylesheet" href="iconfont/iconfont.css">
 	<link rel="stylesheet" href="css/home.css">
@@ -15,24 +15,34 @@
 		<div class="container clearfix">
 			<div class="logo"><a href=""></a></div>
 			<ul class="nav">
-				<li class="on"><a href="javascript:">首页</a></li>
-				<li><a href="javascript:">产品</a></li>
-				<li><a href="javascript:">行业方案</a></li>
-				<li><a href="javascript:">开放平台</a></li>
-				<li><a href="javascript:">服务</a></li>
-				<li><a href="javascript:">消费保障</a></li>
+				<li class="on"><a href="home.html">首页</a></li>
+				<li><a href="functionTable.html">功能说明</a></li>
+				<li><a href="newsCenter.html">新闻中心</a></li>
+				<li><a href="home.html#contact">联系我们</a></li>
 			</ul>
 			<div class="login">
 				<a href="javascript:">注册</a>|<a href="javascript:">登陆</a>
 			</div>
+            <div class="mun">
+                <i class="iconfont">&#xe601;</i>
+                <div class="box">
+                    <a href="home.html">首页</a>
+                    <a href="functionTable.html">功能说明</a>
+                    <a href="newsCenter.html">新闻中心</a>
+                    <a href="home.html#contact">关于我们</a>
+                </div>
+            </div>
 		</div>
         <div class="border-bottom"></div>
 	</div>
 
 	<div class="function">
+		<div class="center-banner">
+			<img src="images/app_4.jpg">
+		</div>
 		<div class="container">
 			<div class="tab clearfix">
-				<a href="javascript:">PC端</a>
+				<a class="on" href="javascript:">PC端</a>
                 <a href="javascript:">WAP端</a>
                 <a href="javascript:">APP端</a>
 			</div>
@@ -41,51 +51,54 @@
 					<table>
 						<tbody>
 							<tr>
-								<th class="td-4" colspan="2">功能模块</th>
-								<th class="td-1">是否支持</th>
-								<th class="td-5">说明</th>
+								<th class="td-1" >功能项</th>
+								<th class="td-3">功能名称</th>
+								<th class="td-6">功能描述</th>
 							</tr>
 							<tr>  
-					            <td class="td-1"  rowspan="7">商家入驻</td>  
-					            <td>PC端商城【B2B2C】</td>  
-					            <td class="td-1">是</td>
-					            <td>多商户商城系统</td>   
+					            <td class="td-1"  rowspan="7">技术架构</td>  
+					            <td>自主研发框架</td>  
+					            <td>系统采用Yii2.0框架搭建，整个商城系统采用面向对象编程和MVC的设计模式，最大程度的降低系统模块间的耦合度以及增加程序的重用性。</td>   
 					        </tr>  
 					        <tr>  
 					            <!--<td>2.1</td>-->  
-					            <td>商家入驻申请流程</td>  
-					            <td class="td-1">是</td>
-					            <td>自定义店铺商品分类、店铺装修DIY</td>  
+					            <td>安全</td>  
+					            <td>依托于Yii安全方面的强大机制，在防范CSRF攻击、SQL注入、密码加密算法、前后台的输入验证等方面最大化的加强系统安全系数。</td>  
 					        </tr>  
 					        <tr>  
 					            <!--<td>3.1</td>-->  
-					            <td>3.2</td>  
-					            <td class="td-1">否</td>
-					            <td>3.4</td>  
+					            <td>数据库服务器主从分离</td>  
+					            <td>支持多台数据库服务器主从分离、读写分离的模式，方便扩展（需额外付费）。</td>  
 					        </tr>
 					        <tr>  
 					            <!--<td>2.1</td>-->  
-					            <td>商家入驻申请流程</td>  
-					            <td class="td-1">是</td>
-					            <td>自定义店铺商品分类、店铺装修DIY</td>  
+					            <td>缓存机制</td>  
+					            <td>采用Yii提供的缓存机制，根据客户实际情况配置Memcache、Redis等不同的缓存框架（Memcache和Redis需要额外收费），为客户快速增长的业务需求、大量的数据提供强大的缓存解决方案。</td>  
 					        </tr>  
 					        <tr>  
 					            <!--<td>3.1</td>-->  
-					            <td>3.2</td>  
-					            <td class="td-1">否</td>
-					            <td>3.4</td>  
+					            <td>HTTP负载均衡</td>  
+					            <td>支持（需额外付费）。</td>  
 					        </tr>
 					        <tr>  
 					            <!--<td>2.1</td>-->  
-					            <td>商家入驻申请流程</td>  
-					            <td class="td-1">是</td>
-					            <td>自定义店铺商品分类、店铺装修DIY</td>  
+					            <td>图片独立服务器部署</td>  
+					            <td>商城的图片资源可独立部署在其他的服务器上，减少图片访问对商城服务器造成的压力，使商城运作更快捷（需额外付费）。</td>  
 					        </tr>  
 					        <tr>  
 					            <!--<td>3.1</td>-->  
-					            <td>3.2</td>  
-					            <td class="td-1">否</td>
-					            <td>3.4</td>  
+					            <td>快递鸟API接口</td>  
+					            <td>一次接入近百家国内常用快递公司，免费服务，没有收费版，接口即时返回当前物流轨迹数据结果。</td>  
+					        </tr>
+					        <tr>  
+					            <td rowspan="2">业务应用层</td>  
+					            <td>MVC模式架构</td>  
+					            <td>采用Yii2.0框架，并重写控制器、视图层。</td>  
+					        </tr>
+					        <tr>  
+					            <!--<td>3.1</td>-->  
+					            <td>商城可视化编辑接</td>  
+					            <td>系统统一的可视化编辑接口，可二次开发样式模板，无缝融合。</td>  
 					        </tr>
 						</tbody>
 					</table>
@@ -94,51 +107,54 @@
 					<table>
 						<tbody>
 							<tr>
-								<th class="td-4" colspan="2">功能模块aaaaaaa</th>
-								<th class="td-1">是否支持</th>
-								<th class="td-5">说明</th>
+								<th class="td-1" >功能项</th>
+								<th class="td-3">功能名称</th>
+								<th class="td-6">功能描述</th>
 							</tr>
 							<tr>  
-					            <td class="td-1"  rowspan="7">商家入驻</td>  
-					            <td>PC端商城【B2B2C】</td>  
-					            <td class="td-1">是</td>
-					            <td>多商户商城系统</td>   
+					            <td class="td-1"  rowspan="7">技术架构</td>  
+					            <td>自主研发框架</td>  
+					            <td>系统采用Yii2.0框架搭建，整个商城系统采用面向对象编程和MVC的设计模式，最大程度的降低系统模块间的耦合度以及增加程序的重用性。</td>   
 					        </tr>  
 					        <tr>  
 					            <!--<td>2.1</td>-->  
-					            <td>商家入驻申请流程</td>  
-					            <td class="td-1">是</td>
-					            <td>自定义店铺商品分类、店铺装修DIY</td>  
+					            <td>安全</td>  
+					            <td>依托于Yii安全方面的强大机制，在防范CSRF攻击、SQL注入、密码加密算法、前后台的输入验证等方面最大化的加强系统安全系数。</td>  
 					        </tr>  
 					        <tr>  
 					            <!--<td>3.1</td>-->  
-					            <td>3.2</td>  
-					            <td class="td-1">否</td>
-					            <td>3.4</td>  
+					            <td>数据库服务器主从分离</td>  
+					            <td>支持多台数据库服务器主从分离、读写分离的模式，方便扩展（需额外付费）。</td>  
 					        </tr>
 					        <tr>  
 					            <!--<td>2.1</td>-->  
-					            <td>商家入驻申请流程</td>  
-					            <td class="td-1">是</td>
-					            <td>自定义店铺商品分类、店铺装修DIY</td>  
+					            <td>缓存机制</td>  
+					            <td>采用Yii提供的缓存机制，根据客户实际情况配置Memcache、Redis等不同的缓存框架（Memcache和Redis需要额外收费），为客户快速增长的业务需求、大量的数据提供强大的缓存解决方案。</td>  
 					        </tr>  
 					        <tr>  
 					            <!--<td>3.1</td>-->  
-					            <td>3.2</td>  
-					            <td class="td-1">否</td>
-					            <td>3.4</td>  
+					            <td>HTTP负载均衡</td>  
+					            <td>支持（需额外付费）。</td>  
 					        </tr>
 					        <tr>  
 					            <!--<td>2.1</td>-->  
-					            <td>商家入驻申请流程</td>  
-					            <td class="td-1">是</td>
-					            <td>自定义店铺商品分类、店铺装修DIY</td>  
+					            <td>图片独立服务器部署</td>  
+					            <td>商城的图片资源可独立部署在其他的服务器上，减少图片访问对商城服务器造成的压力，使商城运作更快捷（需额外付费）。</td>  
 					        </tr>  
 					        <tr>  
 					            <!--<td>3.1</td>-->  
-					            <td>3.2</td>  
-					            <td class="td-1">否</td>
-					            <td>3.4</td>  
+					            <td>快递鸟API接口</td>  
+					            <td>一次接入近百家国内常用快递公司，免费服务，没有收费版，接口即时返回当前物流轨迹数据结果。</td>  
+					        </tr>
+					        <tr>  
+					            <td rowspan="2">业务应用层</td>  
+					            <td>MVC模式架构</td>  
+					            <td>采用Yii2.0框架，并重写控制器、视图层。</td>  
+					        </tr>
+					        <tr>  
+					            <!--<td>3.1</td>-->  
+					            <td>商城可视化编辑接</td>  
+					            <td>系统统一的可视化编辑接口，可二次开发样式模板，无缝融合。</td>  
 					        </tr>
 						</tbody>
 					</table>
@@ -147,123 +163,54 @@
 					<table>
 						<tbody>
 							<tr>
-								<th class="td-4" colspan="2">功能模块bbbbbb</th>
-								<th class="td-1">是否支持</th>
-								<th class="td-5">说明</th>
+								<th class="td-1" >功能项</th>
+								<th class="td-3">功能名称</th>
+								<th class="td-6">功能描述</th>
 							</tr>
 							<tr>  
-					            <td class="td-1"  rowspan="7">商家入驻</td>  
-					            <td>PC端商城【B2B2C】</td>  
-					            <td class="td-1">是</td>
-					            <td>多商户商城系统</td>   
+					            <td class="td-1"  rowspan="7">技术架构</td>  
+					            <td>自主研发框架</td>  
+					            <td>系统采用Yii2.0框架搭建，整个商城系统采用面向对象编程和MVC的设计模式，最大程度的降低系统模块间的耦合度以及增加程序的重用性。</td>   
 					        </tr>  
 					        <tr>  
 					            <!--<td>2.1</td>-->  
-					            <td>商家入驻申请流程</td>  
-					            <td class="td-1">是</td>
-					            <td>自定义店铺商品分类、店铺装修DIY</td>  
+					            <td>安全</td>  
+					            <td>依托于Yii安全方面的强大机制，在防范CSRF攻击、SQL注入、密码加密算法、前后台的输入验证等方面最大化的加强系统安全系数。</td>  
 					        </tr>  
 					        <tr>  
 					            <!--<td>3.1</td>-->  
-					            <td>3.2</td>  
-					            <td class="td-1">否</td>
-					            <td>3.4</td>  
+					            <td>数据库服务器主从分离</td>  
+					            <td>支持多台数据库服务器主从分离、读写分离的模式，方便扩展（需额外付费）。</td>  
 					        </tr>
 					        <tr>  
 					            <!--<td>2.1</td>-->  
-					            <td>商家入驻申请流程</td>  
-					            <td class="td-1">是</td>
-					            <td>自定义店铺商品分类、店铺装修DIY</td>  
+					            <td>缓存机制</td>  
+					            <td>采用Yii提供的缓存机制，根据客户实际情况配置Memcache、Redis等不同的缓存框架（Memcache和Redis需要额外收费），为客户快速增长的业务需求、大量的数据提供强大的缓存解决方案。</td>  
 					        </tr>  
 					        <tr>  
 					            <!--<td>3.1</td>-->  
-					            <td>3.2</td>  
-					            <td class="td-1">否</td>
-					            <td>3.4</td>  
+					            <td>HTTP负载均衡</td>  
+					            <td>支持（需额外付费）。</td>  
 					        </tr>
 					        <tr>  
 					            <!--<td>2.1</td>-->  
-					            <td>商家入驻申请流程</td>  
-					            <td class="td-1">是</td>
-					            <td>自定义店铺商品分类、店铺装修DIY</td>  
+					            <td>图片独立服务器部署</td>  
+					            <td>商城的图片资源可独立部署在其他的服务器上，减少图片访问对商城服务器造成的压力，使商城运作更快捷（需额外付费）。</td>  
 					        </tr>  
 					        <tr>  
 					            <!--<td>3.1</td>-->  
-					            <td>3.2</td>  
-					            <td class="td-1">否</td>
-					            <td>3.4</td>  
+					            <td>快递鸟API接口</td>  
+					            <td>一次接入近百家国内常用快递公司，免费服务，没有收费版，接口即时返回当前物流轨迹数据结果。</td>  
 					        </tr>
 					        <tr>  
-					            <td class="td-1"  rowspan="12">商家入驻</td>  
-					            <td>PC端商城【B2B2C】</td>  
-					            <td class="td-1">是</td>
-					            <td>多商户商城系统</td>   
-					        </tr>  
-					        <tr>  
-					            <!--<td>2.1</td>-->  
-					            <td>商家入驻申请流程</td>  
-					            <td class="td-1">是</td>
-					            <td>自定义店铺商品分类、店铺装修DIY</td>  
-					        </tr>  
-					        <tr>  
-					            <!--<td>3.1</td>-->  
-					            <td>3.2</td>  
-					            <td class="td-1">否</td>
-					            <td>3.4</td>  
-					        </tr>
-					        <tr>  
-					            <!--<td>2.1</td>-->  
-					            <td>商家入驻申请流程</td>  
-					            <td class="td-1">是</td>
-					            <td>自定义店铺商品分类、店铺装修DIY</td>  
-					        </tr>  
-					        <tr>  
-					            <!--<td>3.1</td>-->  
-					            <td>3.2</td>  
-					            <td class="td-1">否</td>
-					            <td>3.4</td>  
-					        </tr>
-					        <tr>  
-					            <!--<td>2.1</td>-->  
-					            <td>商家入驻申请流程</td>  
-					            <td class="td-1">是</td>
-					            <td>自定义店铺商品分类、店铺装修DIY</td>  
-					        </tr>  
-					        <tr>  
-					            <!--<td>3.1</td>-->  
-					            <td>3.2</td>  
-					            <td class="td-1">否</td>
-					            <td>3.4</td>  
+					            <td rowspan="2">业务应用层</td>  
+					            <td>MVC模式架构</td>  
+					            <td>采用Yii2.0框架，并重写控制器、视图层。</td>  
 					        </tr>
 					        <tr>  
 					            <!--<td>3.1</td>-->  
-					            <td>3.2</td>  
-					            <td class="td-1">否</td>
-					            <td>3.4</td>  
-					        </tr>
-					        <tr>  
-					            <!--<td>2.1</td>-->  
-					            <td>商家入驻申请流程</td>  
-					            <td class="td-1">是</td>
-					            <td>自定义店铺商品分类、店铺装修DIY</td>  
-					        </tr>  
-					        <tr>  
-					            <!--<td>3.1</td>-->  
-					            <td>3.2</td>  
-					            <td class="td-1">否</td>
-					            <td>3.4</td>  
-					        </tr>
-					        <tr>  
-					            <!--<td>2.1</td>-->  
-					            <td>商家入驻申请流程</td>  
-					            <td class="td-1">是</td>
-					            <td>自定义店铺商品分类、店铺装修DIY</td>  
-					        </tr>  
-					        <tr>  
-					            <!--<td>3.1</td>-->  
-					            <td>3.2</td>  
-					            <td class="td-1">否</td>
-					            <td>3.4</td>  
+					            <td>商城可视化编辑接</td>  
+					            <td>系统统一的可视化编辑接口，可二次开发样式模板，无缝融合。</td>  
 					        </tr>
 						</tbody>
 					</table>
